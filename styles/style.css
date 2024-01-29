@@ -123,7 +123,7 @@ ol {
 .search-form__checkbox-list {
   display: flex;
   gap: 15px;
-  justify-content: space-around; 
+  justify-content: space-around;
 }
 
 .search-form__pseudo-checkbox {
@@ -175,8 +175,7 @@ ol {
   outline: 1px solid #fff;
 }
 
-.more-button:focus-visible .content__list{
-  /* margin-top: 0; */
+.more-button:focus-visible .content__list {
   padding: 2px;
 }
 
