@@ -88,11 +88,14 @@ ol {
 
 .search-form__label {
   inline-size: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .search-form__label:has(:focus-visible) {
   outline: 1px solid #fff;
-  padding: 2px;
+  outline-offset: 2px;
 }
 
 .search-form__textfield {
@@ -105,6 +108,8 @@ ol {
   font-family: inherit;
   min-inline-size: 225px;
   padding: 0;
+  appearance: none;
+  color: currentColor;
 }
 
 .search-form__textfield:focus {
@@ -118,23 +123,27 @@ ol {
 .search-form__checkbox-list {
   display: flex;
   gap: 15px;
+  justify-content: space-around; 
 }
 
 .search-form__pseudo-checkbox {
-  display: inline-block;
-  vertical-align: middle;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   inline-size: 19px;
   block-size: 19px;
   border: 1px solid #fff;
 }
 
-input[type="checkbox"]:checked + span::after {
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
   content: "";
   inline-size: 15px;
   block-size: 15px;
-  display: flex;
-  margin: 1px;
   background-color: #fff;
+}
+
+.search-form__label-text {
+  margin-inline-start: 5px;
 }
 
 .search-form__label:hover {
@@ -152,7 +161,7 @@ input[type="checkbox"]:checked + span::after {
   font-family: inherit;
   color: inherit;
   background-color: transparent;
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
   padding: 6px 73px 6px 73px;
   cursor: pointer;
 }
@@ -161,9 +170,14 @@ input[type="checkbox"]:checked + span::after {
   outline: none;
 }
 
-.search-form__submit-button:focus-visible {
+.button:focus-visible {
   outline-offset: 1px;
   outline: 1px solid #fff;
+}
+
+.more-button:focus-visible{
+  /* margin-top: 0; */
+  /* padding: 2px; */
 }
 
 .button:hover {
@@ -189,7 +203,7 @@ input[type="checkbox"]:checked + span::after {
 }
 
 .title {
-  font-family: "Oswald";
+  font-family: "Oswald", sans-serif;;
   font-size: 75px;
   line-height: 73px;
   text-transform: uppercase;
@@ -202,15 +216,24 @@ input[type="checkbox"]:checked + span::after {
 }
 
 .content__list {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: flex-end; */
   block-size: 298px;
-  overflow-y: auto;
+  overflow: auto;
   margin-block-start: 26px;
   position: relative;
+  min-inline-size: 399px;
+  /* padding: 2px; */
 }
 
 .content__list-item:not(:last-of-type) {
   padding-block-end: 30px;
 }
+
+/* .content__list-item:not(:last-child) {
+  padding: 0 2px 2px 2px;
+} */
 
 .content__card-link {
   display: block;
@@ -248,7 +271,7 @@ input[type="checkbox"]:checked + span::after {
 }
 
 .content__video-card-title {
-  font-family: "Oswald";
+  font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   font-size: 30px;
   font-weight: 700;
