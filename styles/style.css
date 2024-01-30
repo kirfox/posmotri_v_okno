@@ -74,6 +74,7 @@ ol {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  padding-top: 3px;
 }
 
 .search-form__fieldset {
@@ -101,8 +102,7 @@ ol {
 .search-form__textfield {
   background-color: transparent;
   border: none;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
+  box-shadow: 0 1px 0 #fff, 0 -1px 0 #fff;
   font-size: inherit;
   font-weight: inherit;
   font-family: inherit;
@@ -117,7 +117,7 @@ ol {
 }
 
 .search-form__textfield:active {
-  border: none;
+  box-shadow: none;
 }
 
 .search-form__checkbox-list {
@@ -162,7 +162,7 @@ ol {
   color: inherit;
   background-color: transparent;
   border: 1px solid currentColor;
-  padding: 6px 73px 6px 73px;
+  padding: 5px 73px 5px 73px;
   cursor: pointer;
 }
 
@@ -173,10 +173,6 @@ ol {
 .button:focus-visible {
   outline-offset: 1px;
   outline: 1px solid #fff;
-}
-
-.more-button:focus-visible .content__list {
-  padding: 2px;
 }
 
 .button:hover {
@@ -219,7 +215,7 @@ ol {
   overflow: auto;
   margin-block-start: 26px;
   position: relative;
-  min-inline-size: 399px;
+  inline-size: 399px;
   padding: 2px;
 }
 
@@ -231,7 +227,6 @@ ol {
   display: block;
   text-decoration: none;
   color: inherit;
-  margin: 2px;
 }
 
 .content__card-link:focus {
@@ -281,7 +276,8 @@ ol {
 
 .content__video-card-thumbnail {
   inline-size: 194px;
-  block-size: 103px;
+  min-block-size: 103px;
+  background-size: cover;
 }
 
 .content__card-link_current {
