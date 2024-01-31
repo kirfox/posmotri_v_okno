@@ -55,6 +55,7 @@ ol {
   justify-content: center;
   align-items: flex-end;
   gap: 30px;
+  inline-size: 1140px;
 }
 
 .result__video-container {
@@ -200,10 +201,9 @@ ol {
 .title {
   font-family: "Oswald", sans-serif;
   font-size: 75px;
-  line-height: 73px;
+  line-height: 68px;
   text-transform: uppercase;
   font-weight: 700;
-  max-block-size: 210px;
 }
 
 .content__accent {
@@ -215,7 +215,6 @@ ol {
   overflow: auto;
   margin-block-start: 26px;
   position: relative;
-  inline-size: 399px;
   padding: 2px;
 }
 
@@ -276,7 +275,7 @@ ol {
 
 .content__video-card-thumbnail {
   inline-size: 194px;
-  min-block-size: 103px;
+  block-size: 103px;
   background-size: cover;
 }
 
